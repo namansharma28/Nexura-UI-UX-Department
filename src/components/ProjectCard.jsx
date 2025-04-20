@@ -4,6 +4,7 @@ const ProjectCard = ({
     title, 
     description, 
     videoSrc, 
+    thumbnail,
     cardTitle, 
     cardDescription 
 }) => {
@@ -21,6 +22,7 @@ const ProjectCard = ({
     return (
         <>
             <div className="service-card" onClick={handleCardClick}>
+                <img src={thumbnail} alt="thumbnail" className="thumbnail"/>
                 <h3>{cardTitle}</h3>
                 <p>{cardDescription}</p>
             </div>
@@ -43,18 +45,7 @@ const ProjectCard = ({
                                 </p>
                             </div>
                         </div>
-                        <video 
-                            autoPlay={isHovered}
-                            loop 
-                            muted
-                            playsInline
-                            controls
-                            className="custom-video-player"
-                            style={{ backgroundColor: 'black' }}
-                        >
-                            <source src={videoSrc} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <img src={videoSrc} alt="project preview" className="custom-video-player" />
                     </div>
                 </div>
             )}

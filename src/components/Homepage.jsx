@@ -8,44 +8,63 @@ import Dropdown from "./Team";
 import harry from "/projects/harry potter prototype.gif";
 import food from "/projects/food_website.gif"
 import School from "/projects/School Webpage.png";
-import project2Video from "/projects/project2.mp4";
-import project3Video from "/projects/project3.mp4";
-import project4Video from "/projects/project4.mp4";
+import headphone from "/projects/headphone prototype.gif"
+import landing from "/projects/Landing page.png"
+import nike from "/projects/NIKE WEBSITE.png"
+import travel from "/projects/Animation.gif"
+import flow from "/projects/Flow 1@512p-25fps (14).gif"
 
 // Add this projects data array before the Homepage component
 const projectsData = [
   {
-    cardTitle: "Project 1",
-    cardDescription: "lorem ipsum",
-    title: "jhsdvahefj,wbefj.ewf",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nesciunt accusantium repellendus nobis provident reprehenderit aliquam, soluta voluptatem magnam excepturi id, architecto incidunt sequi amet dicta veniam qui sit molestiae nihil minus neque cumque temporibus. Corporis dicta iure labore, provident ipsa est, impedit adipisci consequuntur perferendis quaerat dolore libero possimus.",
-    videoSrc: project1Video,
+    cardTitle: "Harry potter prototype",
+    cardDescription: "Harry potter prototype",
+    title: "Harry potter prototype",
+    videoSrc: harry,
+    thumbnail: harry,
   },
   {
-    cardTitle: "Project 2",
-    cardDescription: "lorem ipsum",
+    cardTitle: "Nike",
+    cardDescription: "Nike website",
     title: "Nike",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rem, quaerat magni dolorem repellat magnam aperiam exercitationem amet! Blanditiis molestias assumenda distinctio quia saepe libero possimus cumque explicabo ullam! Recusandae odio, quos laboriosam molestiae vero harum ipsam cupiditate quas tempora doloremque ad architecto quam saepe ducimus voluptatum adipisci nihil voluptas!",
-    videoSrc: project2Video,
+    videoSrc: nike,
+    thumbnail: nike,
   },
   {
-    cardTitle: "Project 3",
-    cardDescription: "lorem ipsum",
-    title: "Nike",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rem, quaerat magni dolorem repellat magnam aperiam exercitationem amet! Blanditiis molestias assumenda distinctio quia saepe libero possimus cumque explicabo ullam! Recusandae odio, quos laboriosam molestiae vero harum ipsam cupiditate quas tempora doloremque ad architecto quam saepe ducimus voluptatum adipisci nihil voluptas!",
-    videoSrc: project3Video,
+    cardTitle: "food website",
+    cardDescription: "A food website",
+    title: "food website",
+    videoSrc: food,
+    thumbnail: food,
   },
   {
-    cardTitle: "Project 4",
-    cardDescription: "lorem ipsum",
-    title: "Nike",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rem, quaerat magni dolorem repellat magnam aperiam exercitationem amet! Blanditiis molestias assumenda distinctio quia saepe libero possimus cumque explicabo ullam! Recusandae odio, quos laboriosam molestiae vero harum ipsam cupiditate quas tempora doloremque ad architecto quam saepe ducimus voluptatum adipisci nihil voluptas!",
-    videoSrc: project4Video,
+    cardTitle: "headphone",
+    cardDescription: "prototype website",
+    title: "Headphone prototype",
+    videoSrc: headphone,
+    thumbnail: headphone,
   },
+  {
+    cardTitle: "Travel",
+    cardDescription: "Travel website",
+    title: "Travel",
+    videoSrc: travel,
+    thumbnail: travel,
+  },
+  {
+    cardTitle: "School Webpage",
+    cardDescription: "School Webpage",
+    title: "School Webpage",
+    videoSrc: School,
+    thumbnail: School,
+  },
+  {
+    cardTitle: "Flow",
+    cardDescription: "Flow website",
+    title: "Flow",
+    videoSrc: flow,
+    thumbnail: flow,
+  }
   // Add more projects as needed
 ];
 
@@ -324,7 +343,7 @@ const Homepage = () => {
 
       {/* Pricing Section */}
       <section id="projects" className="services">
-        <h2>Our Brag-Worthy Projects</h2>
+        <h2>Our Projects</h2>
         <div className="services-container">
           {projectsData.map((project, index) => (
             <ProjectCard
@@ -334,6 +353,8 @@ const Homepage = () => {
               title={project.title}
               description={project.description}
               videoSrc={project.videoSrc}
+              author={project.author}
+              thumbnail={project.thumbnail}
             />
           ))}
         </div>
