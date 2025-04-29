@@ -167,6 +167,17 @@ const Homepage = () => {
   }, []);
   const labelIndex = progress / 25; // For 0%, 25%, 50%, 75%, and 100%
 
+  useEffect(() => {
+    const scrollToSection = document.querySelector(".features");
+    const timeoutId = setTimeout(() => {
+      if (scrollToSection) {
+        scrollToSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 5000);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
 
   return (
     <div className="homepage">
@@ -366,7 +377,8 @@ const Homepage = () => {
       <Contact />
 
       {/* Footer */}
-      <footer className="footer">
+        <section id="contactSection">
+        <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">
             <h2>Nexura</h2>
@@ -396,13 +408,10 @@ const Homepage = () => {
               <h3>Quick links</h3>
               <ul>
                 <li>
-                  <a href="#">Main Website</a>
+                  <a href="https://versal-nexura.vercel.app/">Main Website</a>
                 </li>
                 <li>
-                  <a href="#">Join Us</a>
-                </li>
-                <li>
-                  <a href="#">Website Designing Team</a>
+                  <a href="https://forms.gle/r98YMrmw8YpGf2vZ9#">Join Us</a>
                 </li>
               </ul>
             </div>
@@ -415,9 +424,6 @@ const Homepage = () => {
                 <li>
                   <a href="https://www.instagram.com/nexura_rgpv/">Instagram</a>
                 </li>
-                <li>
-                  <a href="#">LinkedIn</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -426,6 +432,7 @@ const Homepage = () => {
           <p>&copy; 2024 Nexura. All rights reserved.</p>
         </div>
       </footer>
+        </section>
     </div>
   );
 };
