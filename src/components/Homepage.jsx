@@ -51,13 +51,7 @@ const projectsData = [
     videoSrc: travel,
     thumbnail: travel,
   },
-  {
-    cardTitle: "School Webpage",
-    cardDescription: "School Webpage",
-    title: "School Webpage",
-    videoSrc: School,
-    thumbnail: School,
-  },
+  
   {
     cardTitle: "Flow",
     cardDescription: "Flow website",
