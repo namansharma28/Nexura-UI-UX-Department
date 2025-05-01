@@ -6,9 +6,9 @@ import ProjectCard from "./ProjectCard";
 import project1Video from "/projects/project1.mp4";
 import Dropdown from "./Team";
 import harry from "/projects/harry potter prototype.gif";
-import food from "/projects/food_website.gif"
+import food from "/projects/JUICY CAN SPIN.gif"
 import School from "/projects/School Webpage.png";
-import headphone from "/projects/headphone prototype.gif"
+import headphone from "/projects/pinterest app prototype.gif"
 import landing from "/projects/Landing page.png"
 import nike from "/projects/NIKE WEBSITE.png"
 import travel from "/projects/Animation.gif"
@@ -31,16 +31,16 @@ const projectsData = [
     thumbnail: nike,
   },
   {
-    cardTitle: "food website",
-    cardDescription: "A food website",
-    title: "food website",
+    cardTitle: "Juicy Can",
+    cardDescription: "Juicy Can spinning website",
+    title: "Juicy Can spinning website",
     videoSrc: food,
     thumbnail: food,
   },
   {
-    cardTitle: "headphone",
-    cardDescription: "prototype website",
-    title: "Headphone prototype",
+    cardTitle: "Pintrest",
+    cardDescription: "Pintrest app ui",
+    title: "Pintrest app ui",
     videoSrc: headphone,
     thumbnail: headphone,
   },
